@@ -9,8 +9,11 @@
         <span class="font-weight-bold">{{review.rating}}/10</span>
         <span class="ml-3">{{review.title}}</span>
         <span class="float-right">
-          <a [routerLink]="['/reviews', review.id, 'edit']" class="p-2 align-self-end">
-            <i class="fa fa-pencil text-accent"></i>
+          <!-- <a [routerLink]="['/reviews', review.id, 'edit']" class="p-2 align-self-end">
+            <span class="fa fa-pencil"></span>
+          </a> -->
+          <a [routerLink]="['/reviews', review.id, 'edit']" class="p-2 small btn btn-primary align-self-end">
+            Edit
           </a>
         </span>
       </h4>
