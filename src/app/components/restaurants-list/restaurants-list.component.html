@@ -3,7 +3,7 @@
   <div *ngFor="let restaurant of restaurants" class="col-lg-4 col-md-12 card-group">
     <div class="card card-cascade mt-2 mb-2">
       <div class="view view-cascade overlay">
-        <img src="assets/{{restaurant.image}}" class="card-img-top" alt="{{restaurant.name}}">
+        <img src="https://raw.githubusercontent.com/philippederyck/pws-tournament-restograde-angular/tree/master/src/assets/{{restaurant.image}}" class="card-img-top" alt="{{restaurant.name}}">
         <a [routerLink]="['/restaurants', restaurant.id, 'reviews']">
           <div class="mask rgba-white-slight"></div>
         </a>
