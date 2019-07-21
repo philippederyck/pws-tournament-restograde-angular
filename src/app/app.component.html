@@ -1,8 +1,12 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light" [containerInside]="false">
-  <mdb-navbar-brand><a class="navbar-brand" routerLink="/home">Restograde</a></mdb-navbar-brand>
+  <mdb-navbar-brand><a class="navbar-brand" routerLink="/">Restograde</a></mdb-navbar-brand>
 
   <links>
-    <button class="navbar-nav ml-auto" mdbBtn type="button" size="sm" color="primary" mdbWavesEffect>
+    <button class="navbar-nav ml-auto" routerLink="/restaurants" mdbBtn type="button" size="sm" color="primary" mdbWavesEffect>
+      <mdb-icon fas icon="eye" class="mr-1"></mdb-icon>
+      View restaurants
+    </button>
+    <button class="navbar-nav" routerLink="/reviews/new" mdbBtn type="button" size="sm" color="primary" mdbWavesEffect>
       <mdb-icon fas icon="plus" class="mr-1"></mdb-icon>
       Add review
     </button>

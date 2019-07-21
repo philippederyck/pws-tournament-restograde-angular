@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RestaurantsListComponent } from './components/restaurants-list/restaurants-list.component';
@@ -10,6 +11,11 @@ import { HomeComponent } from './components/home/home.component';
 import { RestaurantReviewsComponent } from './components/restaurant-reviews/restaurant-reviews.component';
 import { RestaurantReviewsResolve } from './resolvers/restaurant-reviews-resolve';
 import { RestaurantResolve } from './resolvers/restaurant-resolve';
+import { RestaurantsResolve } from './resolvers/restaurants-resolve';
+import { ReviewResolve } from './resolvers/review-resolve';
+import { ReviewEditComponent } from './components/review-edit/review-edit.component';
+import { ReviewFormComponent } from './components/review-form/review-form.component';
+import { ReviewNewComponent } from './components/review-new/review-new.component';
 
 
 @NgModule({
@@ -17,17 +23,23 @@ import { RestaurantResolve } from './resolvers/restaurant-resolve';
     AppComponent,
     RestaurantsListComponent,
     HomeComponent,
-    RestaurantReviewsComponent
+    RestaurantReviewsComponent,
+    ReviewEditComponent,
+    ReviewFormComponent,
+    ReviewNewComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [
     RestaurantResolve,
-    RestaurantReviewsResolve
+    RestaurantReviewsResolve,
+    RestaurantsResolve,
+    ReviewResolve
   ],
   bootstrap: [AppComponent]
 })

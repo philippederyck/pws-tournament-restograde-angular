@@ -1,0 +1,28 @@
+<div class="row mt-5">
+    <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-12 text-center">
+        <form (ngSubmit)="submit()">
+            <select class="browser-default custom-select" [(ngModel)]="review.restaurant" name="restaurant">
+                <option *ngFor="let restaurant of restaurants" [ngValue]="restaurant">{{restaurant.name}}</option>
+            </select>
+
+            <div class="md-form mb-3">
+                <input mdbInputDirective  [validateSuccess]="false" [validateError]="false" [(ngModel)]="review.rating" #rating="ngModel" type="number" min="1" max="10" name="rating" class="form-control">
+                <label for="title">Your rating</label>
+            </div>
+
+            <div class="md-form mb-3">
+                <input mdbInputDirective  [validateSuccess]="false" [validateError]="false" [(ngModel)]="review.title" #title="ngModel" type="text" name="title" class="form-control">
+                <label for="title">Title</label>
+            </div>
+        
+            <div class="md-form">
+                <textarea mdbInputDirective  [validateSuccess]="false" [validateError]="false" [(ngModel)]="review.content" id="content" type="text" name="content" class="md-textarea form-control"
+                rows="2">{{review.content}}</textarea>
+                <label for="content">How was your experience?</label>
+            </div>
+        
+            <input type="submit" id="formButton" class="btn btn-primary" value="Submit review">
+        </form>
+    </div>
+</div>
+      
