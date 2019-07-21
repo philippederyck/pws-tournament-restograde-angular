@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Review } from 'src/app/models/review';
-import { Restaurant } from 'src/app/models/restaurant';
+import { Review } from '../../models/review';
+import { Restaurant } from '../../models/restaurant';
 
 @Component({
   selector: 'app-review-form',

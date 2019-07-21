@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Review } from 'src/app/models/review';
+import { Review } from '../../models/review';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Restaurant } from '../../models/restaurant';
-import { DataService } from 'src/app/data.service';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-review-edit',

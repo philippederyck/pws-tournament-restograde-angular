@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Review } from 'src/app/models/review';
-import { Restaurant } from 'src/app/models/restaurant';
-import { DataService } from 'src/app/data.service';
+import { Restaurant } from '../../models/restaurant';
+import { DataService } from '../../data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
