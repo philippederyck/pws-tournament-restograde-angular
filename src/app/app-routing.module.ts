@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RestaurantsListComponent } from './components/restaurants-list/restaurants-list.component';
 import { RestaurantReviewsComponent } from './components/restaurant-reviews/restaurant-reviews.component';
 import { RestaurantReviewsResolve } from './resolvers/restaurant-reviews-resolve';
+import { RestaurantResolve } from './resolvers/restaurant-resolve';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
     path: 'restaurants/:id/reviews', 
     component: RestaurantReviewsComponent, 
     resolve: {
+      restaurant: RestaurantResolve,
       reviews: RestaurantReviewsResolve
     }
   },

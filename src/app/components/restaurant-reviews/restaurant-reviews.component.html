@@ -1,3 +1,20 @@
-<p>
-  restaurant-reviews works!
-</p>
+<div class="row justify-content-center mt-5">
+  <div class="col-12 text-center">
+    <h2>{{restaurant.name}}</h2>
+    <h6>{{restaurant.description}}</h6>
+  </div>
+  <div *ngFor="let review of reviews" class="card w-75 mt-4 mb-2">
+    <div class="card-body">
+      <h4 class="card-title">
+        <span class="font-weight-bold">{{review.rating}}/10</span>
+        <span class="ml-3">{{review.title}}</span>
+        <span class="float-right">
+          <a [routerLink]="['/reviews', review.id, 'edit']" class="p-2 align-self-end">
+            <i class="fa fa-pencil-alt text-accent"></i>
+          </a>
+        </span>
+      </h4>
+      <p class="card-text pt-2">{{review.content}}</p>
+    </div>
+  </div>
+</div>

@@ -16,6 +16,10 @@ export class DataService {
     return restaurants;
   }
 
+  getRestaurantById(id : number) : Restaurant {
+    return restaurants.filter(r => r.id == id)[0];
+  }
+
   getReviewsByRestaurantId(id : number) : Review[] {
     return reviews.filter(r => r.restaurant.id == id);
   }

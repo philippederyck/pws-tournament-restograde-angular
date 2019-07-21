@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { RestaurantReviewsComponent } from './components/restaurant-reviews/restaurant-reviews.component';
 import { RestaurantReviewsResolve } from './resolvers/restaurant-reviews-resolve';
+import { RestaurantResolve } from './resolvers/restaurant-resolve';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { RestaurantReviewsResolve } from './resolvers/restaurant-reviews-resolve
     MDBBootstrapModule.forRoot()
   ],
   providers: [
+    RestaurantResolve,
     RestaurantReviewsResolve
   ],
   bootstrap: [AppComponent]
