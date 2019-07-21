@@ -22,7 +22,7 @@
 // import 'classlist.js';  // Run `npm install --save classlist.js`.
  
 // Fix a bug in stackblitz: https://github.com/stackblitz/core/issues/758
- import 'core-js/es7/reflect';
+import 'core-js/features/reflect';
 
 /**
  * Web Animations `@angular/platform-browser/animations`
