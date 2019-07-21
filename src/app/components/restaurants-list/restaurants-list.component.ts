@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/data.service';
-import { Restaurant } from 'src/app/models/restaurant';
+import { DataService } from '../../data.service';
+import { Restaurant } from '../..//models/restaurant';
 
 @Component({
   selector: 'app-restaurants-list',
