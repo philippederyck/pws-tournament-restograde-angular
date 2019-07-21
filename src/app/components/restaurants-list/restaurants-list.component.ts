@@ -5,7 +5,7 @@ import { Restaurant } from '../../models/restaurant';
 @Component({
   selector: 'app-restaurants-list',
   templateUrl: './restaurants-list.component.html',
-  styleUrls: ['./restaurants-list.component.sass']
+  styleUrls: ['./restaurants-list.component.scss']
 })
 export class RestaurantsListComponent implements OnInit {
 

@@ -7,7 +7,7 @@ import { DataService } from '../../data.service';
 @Component({
   selector: 'app-review-edit',
   templateUrl: './review-edit.component.html',
-  styleUrls: ['./review-edit.component.sass']
+  styleUrls: ['./review-edit.component.scss']
 })
 export class ReviewEditComponent implements OnInit {
 

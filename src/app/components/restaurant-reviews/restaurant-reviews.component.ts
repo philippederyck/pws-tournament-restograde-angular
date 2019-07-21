@@ -6,7 +6,7 @@ import { Restaurant } from '../..//models/restaurant';
 @Component({
   selector: 'app-restaurant-reviews',
   templateUrl: './restaurant-reviews.component.html',
-  styleUrls: ['./restaurant-reviews.component.sass']
+  styleUrls: ['./restaurant-reviews.component.scss']
 })
 export class RestaurantReviewsComponent implements OnInit {
 

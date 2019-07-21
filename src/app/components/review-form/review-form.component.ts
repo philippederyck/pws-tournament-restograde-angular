@@ -5,7 +5,7 @@ import { Restaurant } from '../../models/restaurant';
 @Component({
   selector: 'app-review-form',
   templateUrl: './review-form.component.html',
-  styleUrls: ['./review-form.component.sass']
+  styleUrls: ['./review-form.component.scss']
 })
 export class ReviewFormComponent implements OnInit {
 

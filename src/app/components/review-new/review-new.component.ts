@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-review-new',
   templateUrl: './review-new.component.html',
-  styleUrls: ['./review-new.component.sass']
+  styleUrls: ['./review-new.component.scss']
 })
 export class ReviewNewComponent implements OnInit {
 
