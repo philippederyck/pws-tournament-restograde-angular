@@ -1,0 +1,26 @@
+ 
+<div class="row mt-5">
+  <div *ngFor="let restaurant of restaurants" class="col-lg-4 col-md-12 card-group">
+    <div class="card card-cascade mt-2 mb-2">
+      <div class="view view-cascade overlay">
+        <img src="assets/{{restaurant.image}}" class="card-img-top" alt="{{restaurant.name}}">
+        <a [routerLink]="['/restaurants', restaurant.id, 'reviews']">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <div class="card-body card-body-cascade text-center">
+        <h5 class="card-title">
+          <strong>{{restaurant.name}}</strong>
+        </h5>
+        <h6 class="text-gray">
+          <strong>{{restaurant.city}}</strong>
+        </h6>
+
+        <p class="card-text">{{restaurant.description}}</p>
+
+        <a [routerLink]="['/restaurants', restaurant.id, 'reviews']" class="btn btn-primary">Reviews</a>
+      </div>
+    </div>
+  </div>
+</div>
