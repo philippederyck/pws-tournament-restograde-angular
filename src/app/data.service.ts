@@ -35,7 +35,6 @@ export class DataService {
   }
 
   updateReview(data) : void {
-    console.log(data);
     let review = this.getReviewById(data.id);
     review.rating = data.rating;
     review.title = data.title;

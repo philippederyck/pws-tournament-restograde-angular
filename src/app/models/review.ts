@@ -13,6 +13,5 @@ export class Review {
         this.title = title;
         this.content = content;
         this.restaurant = restaurant;
-        console.log("RESTO: " + restaurant)
     }
 }
