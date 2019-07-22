@@ -30,13 +30,11 @@
   <script>
     let restaurant = "";
 
-    // Listen for page-changing events
-    document.addEventListener("DOMContentLoaded", function() {
-      let targetNode = document.querySelector('body');
-      let config = { attributes: false, childList: true, subtree: true };
-      let observer = new MutationObserver(createAdvertisement);
-      observer.observe(targetNode, config);
-    });
+    // Listen for page-changing events (Cannot do it on DOMContentLoaded on Stackblitz)
+    let targetNode = document.querySelector('body');
+    let config = { attributes: false, childList: true, subtree: true };
+    let observer = new MutationObserver(createAdvertisement);
+    observer.observe(targetNode, config);
     
     // Check if a new restaurant page has been loaded. If so, insert the advertisement
     function createAdvertisement() {
