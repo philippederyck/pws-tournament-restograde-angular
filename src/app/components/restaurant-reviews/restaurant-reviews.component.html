@@ -3,21 +3,20 @@
     <h2>{{restaurant.name}}</h2>
     <h6>{{restaurant.description}}</h6>
   </div>
-  <div *ngFor="let review of reviews" class="card w-75 mt-4 mb-2">
-    <div class="card-body">
-      <h4 class="card-title">
-        <span class="font-weight-bold">{{review.rating}}/10</span>
-        <span class="ml-3" [innerHTML]="review.title"></span>
-        <span class="float-right">
-          <!-- <a [routerLink]="['/reviews', review.id, 'edit']" class="p-2 align-self-end">
-            <span class="fa fa-pencil"></span>
-          </a> -->
-          <a [routerLink]="['/reviews', review.id, 'edit']" class="p-2 small btn btn-primary align-self-end">
-            Edit
-          </a>
-        </span>
-      </h4>
-      <p class="card-text pt-2" [innerHTML]="safeValue(review.content)"></p>
+  @for(review of reviews; track review.id) {
+    <div class="card w-75 mt-4 mb-2">
+      <div class="card-body">
+        <h4 class="card-title">
+          <span class="font-weight-bold small">{{review.rating}}/10</span>
+          <span class="ml-3" [innerHTML]="review.title"></span>
+          <span class="float-end">
+            <a [routerLink]="['/reviews', review.id, 'edit']" class="p-2 btn btn-primary btn-sm align-self-end">
+              Edit
+            </a>
+          </span>
+        </h4>
+        <p class="card-text pt-2" [innerHTML]="safeValue(review.content)"></p>
+      </div>
     </div>
-  </div>
+  }
 </div>

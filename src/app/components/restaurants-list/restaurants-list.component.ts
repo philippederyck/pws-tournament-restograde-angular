@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../data.service';
-import { Restaurant } from '../../models/restaurant';
+import { Component } from '@angular/core';
+import {DataService} from "../../data.service";
+import {Restaurant} from "../../models/restaurant";
+import {RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-restaurants-list',
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: './restaurants-list.component.html',
-  styleUrls: ['./restaurants-list.component.scss']
+  styleUrl: './restaurants-list.component.css'
 })
-export class RestaurantsListComponent implements OnInit {
+export class RestaurantsListComponent {
+  restaurants: Restaurant[] = [];
 
-  private restaurants : Restaurant[];
-  
-  constructor(private dataService : DataService) { }
+  constructor(private dataService: DataService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.restaurants = this.dataService.getRestaurants();
   }
-
 }

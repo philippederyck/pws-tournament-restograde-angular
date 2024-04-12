@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReviewEditComponent } from './review-edit.component';
 
@@ -6,14 +6,12 @@ describe('ReviewEditComponent', () => {
   let component: ReviewEditComponent;
   let fixture: ComponentFixture<ReviewEditComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ReviewEditComponent ]
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [ReviewEditComponent]
     })
     .compileComponents();
-  }));
-
-  beforeEach(() => {
+    
     fixture = TestBed.createComponent(ReviewEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

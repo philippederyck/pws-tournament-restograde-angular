@@ -1,19 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { Review } from '../../models/review';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Restaurant } from '../../models/restaurant';
-import { DataService } from '../../data.service';
+import { Component } from '@angular/core';
+import {ReviewFormComponent} from "../review-form/review-form.component";
+import {ActivatedRoute, Router} from "@angular/router";
+import {Review} from "../../models/review";
+import {Restaurant} from "../../models/restaurant";
+import {DataService} from "../../data.service";
 
 @Component({
   selector: 'app-review-edit',
+  standalone: true,
+  imports: [
+    ReviewFormComponent
+  ],
   templateUrl: './review-edit.component.html',
-  styleUrls: ['./review-edit.component.scss']
+  styleUrl: './review-edit.component.css'
 })
-export class ReviewEditComponent implements OnInit {
+export class ReviewEditComponent {
 
-  review : Review;
-  restaurants : Restaurant[];
-  
+  review!: Review;
+  restaurants!: Restaurant[];
+
   constructor(private dataService : DataService, private route: ActivatedRoute, private router : Router) { }
 
   ngOnInit() {
