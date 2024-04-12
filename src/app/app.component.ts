@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import {RouterLink, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  imports: [
+    RouterOutlet,
+    RouterLink
+  ],
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'pws-tournament-restograde';
+  title = 'restograde-angular';
 }

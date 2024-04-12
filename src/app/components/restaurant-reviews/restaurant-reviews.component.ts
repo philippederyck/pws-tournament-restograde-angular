@@ -1,28 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { Review } from '../..//models/review';
-import { ActivatedRoute } from '@angular/router';
-import { Restaurant } from '../..//models/restaurant';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Component } from '@angular/core';
+import {ActivatedRoute, RouterModule} from "@angular/router";
+import {Restaurant} from "../../models/restaurant";
+import {Review} from "../../models/review";
 
 @Component({
   selector: 'app-restaurant-reviews',
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: './restaurant-reviews.component.html',
-  styleUrls: ['./restaurant-reviews.component.scss']
+  styleUrl: './restaurant-reviews.component.css'
 })
-export class RestaurantReviewsComponent implements OnInit {
+export class RestaurantReviewsComponent {
+  reviews!: Review[];
+  restaurant!: Restaurant;
 
-  reviews : Review[];
-  restaurant : Restaurant;
-  
-  constructor(private route: ActivatedRoute, private sanitizer : DomSanitizer) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.restaurant = this.route.snapshot.data['restaurant'];
     this.reviews = this.route.snapshot.data['reviews'];
-  }
-
-  safeValue(input) {
-    return this.sanitizer.bypassSecurityTrustHtml(input);
   }
 
 }

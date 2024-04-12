@@ -1,19 +1,23 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Review } from '../../models/review';
-import { Restaurant } from '../../models/restaurant';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {FormsModule} from "@angular/forms";
+import {Review} from "../../models/review";
+import {Restaurant} from "../../models/restaurant";
 
 @Component({
   selector: 'app-review-form',
+  standalone: true,
+  imports: [
+    FormsModule,
+  ],
   templateUrl: './review-form.component.html',
-  styleUrls: ['./review-form.component.scss']
+  styleUrl: './review-form.component.css'
 })
-export class ReviewFormComponent implements OnInit {
-
-  @Input() review: Review;
-  @Input() restaurants: Restaurant[];
+export class ReviewFormComponent {
+  @Input() review!: Review;
+  @Input() restaurants!: Restaurant[];
 
   @Output() onSubmit = new EventEmitter();
-  
+
   constructor() { }
 
   ngOnInit() {
